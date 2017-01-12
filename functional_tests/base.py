@@ -10,9 +10,6 @@ from selenium.common.exceptions import WebDriverException
 from .server_tools import reset_database
 from .server_tools import create_session_on_server
 from .management.commands.create_session import create_pre_authenticated_session
-from pyvirtualdisplay import Display
-display = Display(visible=0, size=(800, 600))
-display.start()
 
 DEFAULT_WAIT = 5
 SCREEN_DUMP_LOCATION = os.path.join(
@@ -35,10 +32,10 @@ class FunctionalTest(StaticLiveServerTestCase):
         cls.server_url = cls.live_server_url
 
     def setUp(self):
-        if self.against_staging:
-            reset_database(self.server_host)
+        # if self.against_staging:
+        #     reset_database(self.server_host)
 
-        self.browser = webdriver.Firefox()
+        self.browser = webdriver.PhantomJS()
         self.browser.implicitly_wait(DEFAULT_WAIT)
 
 
