@@ -122,8 +122,10 @@ class FunctionalTest(StaticLiveServerTestCase):
         ## to set a cookie we need to first visit the domain.
         ## 404 pages load the quickest!
         self.browser.get(self.server_url + "/404_no_such_url/")
-        self.browser.add_cookie(dict(
+        cookie_script = "document.cookie = '{name}={value}; path={path}; domain={domain}';\n".format(
             name=settings.SESSION_COOKIE_NAME,
             value=session_key,
             path='/',
-        ))
+            domain='localhost'
+        )
+        self.browser.execute_script(cookie_script)
