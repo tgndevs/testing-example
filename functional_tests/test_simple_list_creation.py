@@ -62,7 +62,7 @@ class NewVisitorTest(FunctionalTest):
         ## We use a new browser session to make sure that no information
         ## of Edith's is coming through from cookies etc
         self.browser.quit()
-        self.browser = webdriver.Firefox()
+        self.browser = webdriver.PhantomJS()
 
         # Francis visits the home page.  There is no sign of Edith's
         # list
@@ -89,4 +89,3 @@ class NewVisitorTest(FunctionalTest):
         self.assertIn('Buy milk', page_text)
 
         # Satisfied, they both go back to sleep
-

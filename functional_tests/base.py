@@ -10,9 +10,6 @@ from selenium.common.exceptions import WebDriverException
 from .server_tools import reset_database
 from .server_tools import create_session_on_server
 from .management.commands.create_session import create_pre_authenticated_session
-from pyvirtualdisplay import Display
-display = Display(visible=0, size=(800, 600))
-display.start()
 
 DEFAULT_WAIT = 5
 SCREEN_DUMP_LOCATION = os.path.join(
@@ -38,7 +35,7 @@ class FunctionalTest(StaticLiveServerTestCase):
         if self.against_staging:
             reset_database(self.server_host)
 
-        self.browser = webdriver.Firefox()
+        self.browser = webdriver.PhantomJS()
         self.browser.implicitly_wait(DEFAULT_WAIT)
 
 
@@ -125,8 +122,10 @@ class FunctionalTest(StaticLiveServerTestCase):
         ## to set a cookie we need to first visit the domain.
         ## 404 pages load the quickest!
         self.browser.get(self.server_url + "/404_no_such_url/")
-        self.browser.add_cookie(dict(
+        cookie_script = "document.cookie = '{name}={value}; path={path}; domain={domain}';\n".format(
             name=settings.SESSION_COOKIE_NAME,
             value=session_key,
             path='/',
-        ))
+            domain='localhost'
+        )
+        self.browser.execute_script(cookie_script)
