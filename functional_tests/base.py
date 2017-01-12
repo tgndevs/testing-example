@@ -32,8 +32,8 @@ class FunctionalTest(StaticLiveServerTestCase):
         cls.server_url = cls.live_server_url
 
     def setUp(self):
-        # if self.against_staging:
-        #     reset_database(self.server_host)
+        if self.against_staging:
+            reset_database(self.server_host)
 
         self.browser = webdriver.PhantomJS()
         self.browser.implicitly_wait(DEFAULT_WAIT)

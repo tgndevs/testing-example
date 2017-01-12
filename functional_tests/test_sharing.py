@@ -17,7 +17,7 @@ class SharingTest(FunctionalTest):
         self.addCleanup(lambda: quit_if_possible(edith_browser))
 
         # Her friend Oniciferous is also hanging out on the lists site
-        oni_browser = webdriver.Firefox()
+        oni_browser = webdriver.PhantomJS()
         self.addCleanup(lambda: quit_if_possible(oni_browser))
         self.browser = oni_browser
         self.create_pre_authenticated_session('oniciferous@example.com')
@@ -57,4 +57,3 @@ class SharingTest(FunctionalTest):
         self.browser = edith_browser
         self.browser.refresh()
         list_page.wait_for_new_item_in_list('Hi Edith!', 2)
-
