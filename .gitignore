@@ -6,3 +6,4 @@ ghostdriver.log
 .vagrant/
 .idea/
 Vagrantfile
+.coverage
