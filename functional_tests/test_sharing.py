@@ -1,10 +1,13 @@
+import signal
 from selenium import webdriver
 from .base import FunctionalTest
 from .home_and_list_pages import HomePage
 
 
 def quit_if_possible(browser):
-    try: browser.quit()
+    try:
+        browser.service.process.send_signal(signal.SIGTERM) # kill the specific phantomjs child proc
+        browser.quit()
     except: pass
 
 

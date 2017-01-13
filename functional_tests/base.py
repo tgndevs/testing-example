@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import signal
 from datetime import datetime
 from django.conf import settings
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
@@ -48,6 +49,7 @@ class FunctionalTest(StaticLiveServerTestCase):
                 self.browser.switch_to_window(handle)
                 self.take_screenshot()
                 self.dump_html()
+        self.browser.service.process.send_signal(signal.SIGTERM) # kill the specific phantomjs child proc
         self.browser.quit()
         super().tearDown()
 
