@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'ubq%am9nu72%xhy8!rgygzflm4@#(1rw^5p%mtr0w9^vdgfk81'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'testing-example.herokuapp.com']
 
 
 # Application definition
@@ -84,9 +85,20 @@ WSGI_APPLICATION = 'superlists.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, '../database/db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, './database/db.sqlite3'),
     }
 }
+
+
+if os.getenv('DATABASE_URL', '') != '':
+    # Update database configuration with $DATABASE_URL.
+    db_from_env = dj_database_url.config()
+    DATABASES['default'].update(db_from_env)
+
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 # Password validation
@@ -145,8 +157,12 @@ LOGGING = {
     'root': {'level': 'INFO'},
 }
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'obeythetestinggoat@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
-EMAIL_USE_TLS = True
+if os.getenv('MAILTRAP_ENABLED', '') != '':
+    EMAIL_HOST = 'mailtrap.io'
+    EMAIL_HOST_USER = os.getenv('MAILTRAP_USER', '')
+    EMAIL_HOST_PASSWORD = os.getenv('MAILTRAP_PASSWORD', '')
+    EMAIL_PORT = '2525'
 
+else:
+    # It writes e-mails to standard out instead of sending them
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
