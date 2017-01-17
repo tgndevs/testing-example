@@ -41,7 +41,6 @@ class LoginTest(FunctionalTest):
                 inbox.dele(email_id)
             inbox.quit()
 
-
     def test_can_get_email_link_to_log_in(self):
         # Edith goes to the awesome superlists site
         # and notices a "Log in" section in the navbar for the first time
@@ -84,4 +83,3 @@ class LoginTest(FunctionalTest):
 
         # She is logged out
         self.assert_logged_out(email=test_email)
-

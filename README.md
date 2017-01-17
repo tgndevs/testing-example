@@ -1,11 +1,14 @@
 # Testing example
 
 [![Build Status](https://travis-ci.org/tgndevs/testing-example.svg?branch=master)](https://travis-ci.org/tgndevs/testing-example)
+[![Style Status](https://app.snap-ci.com/tgndevs/testing-example/branch/master/build_image)](https://app.snap-ci.com/tgndevs/testing-example/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/tgndevs/testing-example/badge.svg?branch=master)](https://coveralls.io/github/tgndevs/testing-example?branch=master)
 [![Code Climate](https://codeclimate.com/github/tgndevs/testing-example/badges/gpa.svg)](https://codeclimate.com/github/tgndevs/testing-example)
 [![AUR](https://img.shields.io/aur/license/yaourt.svg)]()
 
 This is a proof-of-concept project, to go from a simple project to a tested project with CI using free tools.
+
+The Django application for the demos have been copied from [hjwp/book-example](https://github.com/hjwp/book-example).
 
 In the following section you will see the current status of the project. Step by step, it is going to be updated to include more and more features.
 

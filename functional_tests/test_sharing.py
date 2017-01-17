@@ -6,9 +6,11 @@ from .home_and_list_pages import HomePage
 
 def quit_if_possible(browser):
     try:
-        browser.service.process.send_signal(signal.SIGTERM) # kill the specific phantomjs child proc
+        # kill the specific phantomjs child process
+        browser.service.process.send_signal(signal.SIGTERM)
         browser.quit()
-    except: pass
+    except:
+        pass
 
 
 class SharingTest(FunctionalTest):

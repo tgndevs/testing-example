@@ -8,4 +8,3 @@ urlpatterns = [
     url(r'^lists/', include(list_urls)),
     url(r'^accounts/', include(accounts_urls)),
 ]
-
