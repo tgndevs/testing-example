@@ -1,9 +1,0 @@
-__pycache__
-*.pyc
-db.sqlite3
-functional_tests/screendumps
-ghostdriver.log
-.vagrant/
-.idea/
-Vagrantfile
-.coverage
