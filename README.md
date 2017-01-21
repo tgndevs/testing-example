@@ -2,6 +2,7 @@
 
 
 [![Build Status](https://travis-ci.org/tgndevs/testing-example.svg?branch=master)](https://travis-ci.org/tgndevs/testing-example)
+[![Style Status](https://app.snap-ci.com/tgndevs/testing-example/branch/master/build_image)](https://app.snap-ci.com/tgndevs/testing-example/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/tgndevs/testing-example/badge.svg?branch=master)](https://coveralls.io/github/tgndevs/testing-example?branch=master)
 [![Code Climate](https://codeclimate.com/github/tgndevs/testing-example/badges/gpa.svg)](https://codeclimate.com/github/tgndevs/testing-example)
 [![Code Health](https://landscape.io/github/tgndevs/testing-example/master/landscape.svg?style=flat)](https://landscape.io/github/tgndevs/testing-example/master)

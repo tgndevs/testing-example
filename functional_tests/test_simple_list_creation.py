@@ -45,7 +45,6 @@ class NewVisitorTest(FunctionalTest):
 
         # Satisfied, she goes back to sleep
 
-
     def test_multiple_users_can_start_lists_at_different_urls(self):
         # Edith start a new todo list
         self.browser.get(self.server_url)
@@ -60,9 +59,10 @@ class NewVisitorTest(FunctionalTest):
 
         # Now a new user, Francis, comes along to the site.
 
-        ## We use a new browser session to make sure that no information
-        ## of Edith's is coming through from cookies etc
-        self.browser.service.process.send_signal(signal.SIGTERM) # kill the specific phantomjs child proc
+        # We use a new browser session to make sure that no information
+        # of Edith's is coming through from cookies etc
+        # kill the specific phantomjs child process
+        self.browser.service.process.send_signal(signal.SIGTERM)
         self.browser.quit()
         self.browser = webdriver.PhantomJS()
 
