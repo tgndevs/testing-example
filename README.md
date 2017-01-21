@@ -8,9 +8,9 @@
 [![Requirements Status](https://requires.io/github/tgndevs/testing-example/requirements.svg?branch=master)](https://requires.io/github/tgndevs/testing-example/requirements/?branch=master)
 [![AUR](https://img.shields.io/aur/license/yaourt.svg)]()
 
-This is a Django project to exemplify how important is including testing into your software projects.
+This Django application is for exemplify how important is including testing into your software projects.
 
-The application have been copied from [hjwp/book-example](https://github.com/hjwp/book-example).
+The application have been copied from [hjwp/book-example](https://github.com/hjwp/book-example). The application is a website where users can create todo's list and share between them.
 
 ![Main page](https://raw.githubusercontent.com/tgndevs/testing-example/master/main.png)
 
