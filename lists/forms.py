@@ -36,7 +36,7 @@ class NewListForm(ItemForm):
 class ExistingListItemForm(ItemForm):
 
     def __init__(self, for_list, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(ItemForm, self).__init__(*args, **kwargs)
         self.instance.list = for_list
 
 
@@ -46,4 +46,3 @@ class ExistingListItemForm(ItemForm):
         except ValidationError as e:
             e.error_dict = {'text': [DUPLICATE_ITEM_ERROR]}
             self._update_errors(e)
-
