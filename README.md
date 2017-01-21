@@ -1,15 +1,21 @@
 # Testing example
 
+
 [![Build Status](https://travis-ci.org/tgndevs/testing-example.svg?branch=master)](https://travis-ci.org/tgndevs/testing-example)
 [![Coverage Status](https://coveralls.io/repos/github/tgndevs/testing-example/badge.svg?branch=master)](https://coveralls.io/github/tgndevs/testing-example?branch=master)
 [![Code Climate](https://codeclimate.com/github/tgndevs/testing-example/badges/gpa.svg)](https://codeclimate.com/github/tgndevs/testing-example)
+[![Code Health](https://landscape.io/github/tgndevs/testing-example/master/landscape.svg?style=flat)](https://landscape.io/github/tgndevs/testing-example/master)
+[![Requirements Status](https://requires.io/github/tgndevs/testing-example/requirements.svg?branch=master)](https://requires.io/github/tgndevs/testing-example/requirements/?branch=master)
 [![AUR](https://img.shields.io/aur/license/yaourt.svg)]()
 
-This is a proof-of-concept project, to go from a simple project to a tested project with CI using free tools.
+This is a Django project to exemplify how important is including testing into your software projects.
 
-In the following section you will see the current status of the project. Step by step, it is going to be updated to include more and more features.
+The application have been copied from [hjwp/book-example](https://github.com/hjwp/book-example).
 
-The examples are available at the [Wiki](https://github.com/tgndevs/testing-example/wiki) pages.
+![Main page](https://raw.githubusercontent.com/tgndevs/testing-example/master/main.png)
+
+- [Slides](https://tgndevs.github.io/testing-example)
+- [Online Demo](https://testing-example.herokuapp.com)
 
 ## Authors
 
@@ -18,11 +24,37 @@ The examples are available at the [Wiki](https://github.com/tgndevs/testing-exam
 * [Jordi Pujol](https://github.com/jpahullo)
 
 
-## Contributing
+# Getting started with the Django app
+
+## Install dependencies
+
+For Production or Development environment:
+```
+pip3 install -r requirements.txt
+```
+
+For testing environment:
+```
+pip3 install -r requirements-test.txt
+```
+
+## Prepare the database:
+To initialize the database execute:
+```
+python3 manage.py migrate
+```
+
+## Run server
+To run the server execute:
+```
+python3 manage.py runserver 0.0.0.0:8000
+```
+
+# Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/tgndevs/testing-example/issues and https://github.com/tgndevs/testing-example/pulls. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
-## License
+# License
 
 The repository is available as open source under the terms of the [GPL License](https://opensource.org/licenses/GPL-2.0).
