@@ -27,9 +27,9 @@ before_install:
 install:
   - pip install -r requirements-test.txt
   - pip install coveralls
+  - python manage.py collectstatic --no-input
 
 script:
-  - python manage.py collectstatic --no-input
   - coverage run --source=lists,accounts manage.py test -v 2
 
 after_success:
