@@ -1,3 +1,7 @@
+.reveal h1 {
+    font-size: 3.0em;
+}
+
 .reveal section img {
   border: 0;
   box-shadow: none;
@@ -6,4 +10,34 @@
 
 .reveal pre {
     box-shadow: none;
+}
+
+.two-floating-elements > ul ~ p,
+.two-floating-elements > p ~ ul {
+  max-width: 50%;
+  float: right;
+  font-size: 0.7em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.two-floating-elements > p ~ ul {
+  margin-left: 0;
+}
+
+img {
+  border: none;
+  background: none;
+}
+
+img[alt=book] {
+  width: 50%;
+}
+
+img[alt=tdd-cycle] {
+  width: 60%;
+}
+
+.reveal table th, .reveal table td {
+    border-bottom: 0;
 }

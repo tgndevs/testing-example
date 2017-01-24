@@ -1,4 +1,6 @@
-### Testing apps
+# Testing web applications
+
+### (with a real demo)
 
 <br><br>
 
@@ -8,30 +10,24 @@ by <font color="#2196F3">*Jordi Pujol*</font>, <font color="#2196F3">*Guillermo 
 
 ---
 
+<!-- .slide: class="two-floating-elements" -->
+
+## The demo app
+
+* Django application
+* Based on this book ->
+* TODO list
+
+![book](img/book.jpg)
+
+---
+
 ### Why testing software is important?
 
-* Confidence
+* Gives you confidence
 * Fix and prevent bugs
 * Provide support for refactoring
 * Enables teams to move quicker
-
-----
-
-### Functional tests
-
-* a.k.a Acceptance, End-to-End, Black box, Browser testing
-* Test the application from the outside
-* Based on a User Story
-
-----
-
-### Functional tests
-
-- Negative scenarios
-- Forms
-- File manipulation and calculations
-- Search
-- Media components
 
 ----
 
@@ -39,17 +35,55 @@ by <font color="#2196F3">*Jordi Pujol*</font>, <font color="#2196F3">*Guillermo 
 
 * Test the application from the inside
 * Small pieces of code, typically individual functions
-* Give input -> validate output
+* Provide input -> validate output
 * If test has external dependencies, mock them
+
+----
+
+### Functional tests
+
+* a.k.a Acceptance, End-to-End, Black box, Browser testing
+* Test the application from the outside
+* Based on a User Story - user interactions
+  * e.g.. registering an account, sending a message to a user
+* Selenium WebDriver:
+  * ChromeDriver, FirefoxDriver, PhantomJSDriver, ...
+
+----
+
+### Functional tests
+
+* Negative scenarios
+* Forms
+* File manipulation and calculations
+* Search
+* Media components
 
 ----
 
 ### Other tests
 
-* UI and Usability Testing
-* Integration Testing
-* Performance Testing
-* Security Testing
+<br>
+
+<table>
+  <tr>
+    <td>- UI and Usability Testing</td>
+    <td>- Performance Testing</td>
+  </tr>
+  <tr>
+    <td>- Integration Testing</td>
+    <td>- Browser compatibility Testing</td>
+  </tr>
+  <tr>
+    <td>- Security Testing</td>
+    <td>- Load Testing</td>
+  </tr>
+</table>
+
+<br>
+
+and more...
+
 
 ----
 
@@ -61,17 +95,13 @@ TDD or not TDD?
 
 ### TDD Cycle
 
-![TDD](img/tdd-cycle.png)
+![tdd-cycle](img/tdd-cycle.png)
 
 ---
 
 ## What about code quality?
 
 ![WTFm](img/wtfm.jpg)
-
----
-
-# Demo
 
 ---
 
