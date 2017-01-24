@@ -1,4 +1,4 @@
-# Testing example
+# Superlists
 
 
 [![Build Status](https://travis-ci.org/tgndevs/testing-example.svg?branch=master)](https://travis-ci.org/tgndevs/testing-example)
