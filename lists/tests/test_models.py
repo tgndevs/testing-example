@@ -8,6 +8,13 @@ User = get_user_model()
 
 class ItemModelTest(TestCase):
 
+    def test_default_fake_text(self):
+        item = FakeItem()
+        self.assertEqual(item.text, '')
+
+    def test_failing(self):
+        self.assertEqual('1', '2')
+
     def test_default_text(self):
         item = Item()
         self.assertEqual(item.text, '')
