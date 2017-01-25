@@ -44,15 +44,19 @@ github.com/tgndevs/superlists
 
 ---
 
+# Types of tests
+
+----
+
 ## Unit tests
 
 <br>
 
-* Test the application from the inside
-* Small pieces of code, typically individual functions
-* Typically fast and quick to debug
+* Test the application from the **inside**
+* **Small pieces** of code, typically individual functions
 * Provide input -> validate output
-* If test has external dependencies, mock (or stub) them
+* If test has external dependencies, **mock** (or stub) them
+* Typically **fast** and quick to debug
 
 ----
 
@@ -91,9 +95,9 @@ OK
 <br>
 
 * a.k.a Acceptance, End-to-End, Black box, Browser testing
-* Test the application from the outside
-* Based on a User Story - user interactions
-  * e.g.. registering an account, sending a message to a user
+* Test the application from the **outside**
+* Based on a **User Story** - user interactions
+  * e.g.. registering an account, sending a message to another user, ...
 * Selenium:
   * ChromeDriver, FirefoxDriver, PhantomJSDriver, ...
 
@@ -111,28 +115,15 @@ OK
 
 ----
 
-## Other tests
+## Other types
 
 <br>
 
-<table>
-  <tr>
-    <td>- UI and Usability Testing</td>
-    <td>- Performance Testing</td>
-  </tr>
-  <tr>
-    <td>- Integration Testing</td>
-    <td>- Browser compatibility</td>
-  </tr>
-  <tr>
-    <td>- Security Testing</td>
-    <td>- Load Testing</td>
-  </tr>
-</table>
-
-<br>
-
-and more...
+* UI and Usability Testing</td>
+* <!-- .element: class="fragment" -->Browser compatibility Testing
+* <!-- .element: class="fragment" -->Integration Testing
+* <!-- .element: class="fragment" -->Performance Testing
+* <!-- .element: class="fragment" -->Security Testing
 
 ---
 
@@ -149,8 +140,28 @@ and more...
   * *No external dependencies*
   * *No random fails*
 * <!-- .element: class="fragment" -->Debugging
+  * *Tests as debugging tool*
 
 ![pyramid](img/test-pyramid.png)
+
+---
+
+<!-- .slide: class="two-floating-elements" -->
+
+## Code quality
+
+* Good tests, good coverage
+* <!-- .element: class="fragment" -->Code review - Pair programming
+* <!-- .element: class="fragment" -->Validate with standards - linters
+* <!-- .element: class="fragment" -->Reduce complexity
+* <!-- .element: class="fragment" -->Design patterns - Best practices
+* <!-- .element: class="fragment" -->...
+
+![book](img/book2.jpg)
+
+----
+
+![WTFm](img/wtfm.png)
 
 ---
 
@@ -163,26 +174,6 @@ and more...
 ## TDD Cycle
 
 ![tdd-cycle](img/tdd-cycle.png)
-
----
-
-<!-- .slide: class="two-floating-elements" -->
-
-## Code quality
-
-* Tests, tests, and tests
-* Good coverage
-* Code review - Pair programming
-* Validate with standards - linters
-* Reduced complexity
-* Design patterns
-* ...
-
-![book](img/book2.jpg)
-
-----
-
-![WTFm](img/wtfm.png)
 
 ---
 
