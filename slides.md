@@ -98,20 +98,9 @@ OK
 * Test the application from the **outside**
 * Based on a **User Story** - user interactions
   * e.g.. registering an account, sending a message to another user, ...
+* Also negative scenarios
 * Selenium:
   * ChromeDriver, FirefoxDriver, PhantomJSDriver, ...
-
-----
-
-## Functional tests
-
-<br>
-
-* Negative scenarios
-* Forms
-* File manipulation and calculations
-* Search
-* Media components
 
 ----
 
@@ -119,7 +108,8 @@ OK
 
 <br>
 
-* UI and Usability Testing</td>
+* UI and Usability Testing
+* <!-- .element: class="fragment" -->Accessibility Testing
 * <!-- .element: class="fragment" -->Browser compatibility Testing
 * <!-- .element: class="fragment" -->Integration Testing
 * <!-- .element: class="fragment" -->Performance Testing
