@@ -12,6 +12,11 @@
     box-shadow: none;
 }
 
+.reveal td {
+  vertical-align: top;
+  width: 50%;
+}
+
 .two-floating-elements > ul ~ p,
 .two-floating-elements > p ~ ul {
   max-width: 50%;
@@ -31,7 +36,7 @@ img {
 }
 
 img[alt=book] {
-  width: 50%;
+  width: 60%;
 }
 
 img[alt=tdd-cycle] {
